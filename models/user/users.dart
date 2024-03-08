@@ -4,7 +4,7 @@ import 'students.dart';
 class Users {
   late String fullName;
   late String email;
-  late int password;
+  late String password;
   late String memberType;
   int? phoneNumber;
 
@@ -21,17 +21,6 @@ class Users {
       {required this.fullName,
       required this.email,
       required this.phoneNumber}) {}
-
-  // Hesaba giriş
-  void login() {
-    print('${memberType} olarak giriş yapıldı. Hoşgeldin ${fullName}');
-  }
-
-  // Kayit olma
-  void signup() {
-    print(
-        'Üyelik kaydınız başarılı bir şekilde gerçekleşmiştir. Ad Soyad: ${fullName} || Email: ${email} || Şifreniz: ${password}');
-  }
 
   // Bilgileri, students ve instructor class'ındaki farklılıklara göre duzenli sıralama
 

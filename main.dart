@@ -2,22 +2,26 @@ import 'models/education/education.dart';
 import 'models/user/careers.dart';
 import 'models/user/instructors.dart';
 import 'models/user/students.dart';
+import 'models/user/users.dart';
+import 'models/auth/authenticator.dart';
 
 void main() {
-  Students student = Students("Beginner",
+  Users student = Students("Beginner",
       fullName: "Uzay Aydın",
-      email: "test@gmail.com",
-      password: 2222,
+      email: "testgmail.com",
+      password: "2222",
       memberType: "Öğrenci",
       phoneNumber: 222222222);
 
-  student.signup();
+  Authenticator.login(student, "testgmail.com", "2222");
+  Authenticator.signup("Uzay Aydın", "testgmail.com", "2222");
+
   student.showInfo();
 
   Instuctors instuctors = Instuctors("C# - Dart ",
       fullName: "Mark Zuckerberg",
       email: "test3@gmail.com",
-      password: 22222,
+      password: '22222',
       memberType: "Öğretmen");
 
   instuctors.showInfo();
@@ -35,9 +39,9 @@ void main() {
 
   careers.submit();
 
-  Education education = Education("Kubilay",
-      headLine: "Mobil Geliştirici(Flutter)",
-      langType: "Dart/Flutter",
+  Education education = Education('Kubilay',
+      headLine: "Mobil Geliştirme/Flutter",
+      langType: "Dart",
       details:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam");
 

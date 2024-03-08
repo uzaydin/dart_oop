@@ -15,7 +15,7 @@ class Education extends Users {
 
   void publish() {
     print(
-        '${headLine} konu başlıklı içeriğimizin detayları ${details} ${fullName} tarafından ${langType} kullanılarak hazırlanmıştır.');
+        '${headLine} konu başlıklı içeriğimizin detayları ${details}.  ${fullName.toUpperCase()} tarafından ${langType} kullanılarak hazırlanmıştır.');
   }
 
   void showInfo() {
